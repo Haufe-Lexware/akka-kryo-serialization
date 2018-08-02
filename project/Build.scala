@@ -38,7 +38,7 @@ object Build extends sbt.Build {
     resolvers += sonatypeSnapshot,
     // publishArtifact in packageDoc := false,
     scalaVersion := "2.11.12",
-    crossScalaVersions := Seq(scalaVersion.value, "2.12.6"),
+//    crossScalaVersions := Seq(scalaVersion.value, "2.12.6"),
     libraryDependencies += "com.typesafe.akka" %% "akka-remote" % akkaVersion,
     libraryDependencies += "com.esotericsoftware" % "kryo" % "4.0.2",
     libraryDependencies += "org.lz4" % "lz4-java" % "1.4",
