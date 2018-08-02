@@ -28,7 +28,7 @@ object Build extends sbt.Build {
   lazy val typesafe = "Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/"
   lazy val typesafeSnapshot = "Typesafe Snapshots Repository" at "http://repo.typesafe.com/typesafe/snapshots/"
   lazy val sonatypeSnapshot = "Sonatype Snapshots Repository" at "https://oss.sonatype.org/content/repositories/snapshots/"
-  lazy val akkaVersion = "2.4.12"
+  lazy val akkaVersion = "2.5.11"
 
   lazy val root = Project(id = "akka-kryo-serialization", base = file(".")).settings(
 
@@ -37,13 +37,13 @@ object Build extends sbt.Build {
     resolvers += typesafeSnapshot,
     resolvers += sonatypeSnapshot,
     // publishArtifact in packageDoc := false,
-    scalaVersion := "2.12.0",
-    crossScalaVersions := Seq(scalaVersion.value, "2.11.8"),
+    scalaVersion := "2.11.12",
+    crossScalaVersions := Seq(scalaVersion.value, "2.12.6"),
     libraryDependencies += "com.typesafe.akka" %% "akka-remote" % akkaVersion,
-    libraryDependencies += "com.esotericsoftware" % "kryo" % "4.0.1",
+    libraryDependencies += "com.esotericsoftware" % "kryo" % "4.0.2",
     libraryDependencies += "org.lz4" % "lz4-java" % "1.4",
     libraryDependencies += "commons-io" % "commons-io" % "2.5" % "test",
-    libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.4" % "test",
+    libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5" % "test",
     libraryDependencies += "com.typesafe.akka" %% "akka-persistence" % akkaVersion % "test",
     libraryDependencies += "com.typesafe.akka" %% "akka-testkit" % akkaVersion % "test",
 
